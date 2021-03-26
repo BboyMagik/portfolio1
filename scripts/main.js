@@ -65,7 +65,6 @@ function message9() {
 
 //Javascript Exercise #1 Output Larger of 2 Sums
 function LargerNumber() {
-    let Num1, Num2;
     let Num1 = prompt("Please enter your first integer");
     let Num2 = prompt("Please enter your second integer");
     let biggerNum = "";
@@ -75,56 +74,71 @@ function LargerNumber() {
     if (Num1 == Num2){
         biggerNum = "Both are Equal";
     }
-    document.getElementById("riddle-button1").innerHTML = biggerNum
 
     else if (Num1 > Num2){
-        biggerNum = Num1 ;
+        biggerNum = Num1;
     }
-    document.getElementById("riddle-button1").innerHTML = biggerNum
 
     else if (Num1 < Num2){
         biggerNum = Num2;
     }
-    document.getElementById("riddle-button1").innerHTML = biggerNum
 
     else {
         biggerNum = "The characters you entered are not integers. Please try again";
     }
-;    document.getElementById("riddle-button1").innerHTML = biggerNum
+    document.getElementById("riddle-button1").innerHTML = biggerNum
     //Here I accounted for all the different potential outcomes and told the computer what to send in case a similar situation occured. If the characters entered didn't fit any rules, the user may have entered a letter or another unuseable character
 }
 
 //Javascript Exercise #2 Finding the sign of the product from 3 numbers {
-    let num1, num2, num3;
+function SignofProduct() {
     let num1 = prompt ("Please enter your first integer");
     let num2 = prompt ("Please enter your second integer");
     let num3 = prompt ("your third integer");
     let plusminus = "";
-    let num1 * num2 * num3 = product;
-    //Here I'm trying to say that num1, num2 and num3 will be my variables and the 3 integers that will be multiplied to find the sign
-    
-()num1 * num2 * num3 if product == 0 {
+    let product = num1 * num2 * num3;
+    if (product == 0) {
         plusminus =  "Your product is neutral";
     }
-
-    else if (num1 * num2 * num3 < 0) {
+        
+    else if (product < 0) {
         plusminus = "Your product is negative";
     }
 
-    else if (num1 * num2 * num3 == 0) {
-        plusminus = "Your product is neutral"
+    else if (product > 0) {
+        plusminus = "Your product is positive";
+    }
+        
+    else {
+        plusminus = "please enter a valid number"
     }
 
-    else {
-        signofproducts = "please enter a valid number"
-    }
-    document.getgetElementById("riddle-button2").innerHTML = signofproducts;
-    //Here I tried to account for all possible outcomes and planning an alert for what would happen if such event were to occur. If the user entered any amounts of 0 in a slot, the outcome would result in a 0 so in order to prevent a lot of invalids come up, I made a "neutral" alert which told the useer their product isn't positive or negative
+    document.getElementById("riddle-button2").innerHTML = plusminus;
 }
+    
+    //Here I'm trying to say that num1, num2 and num3 will be my variables and the 3 integers that will be multiplied to find the sign
+    
+// ()num1 * num2 * num3 if product == 0 {
+//         plusminus =  "Your product is neutral";
+//     }
+
+//     else if (num1 * num2 * num3 < 0) {
+//         plusminus = "Your product is negative";
+//     }
+
+//     else if (num1 * num2 * num3 == 0) {
+//         plusminus = "Your product is neutral"
+//     }
+
+//     else {
+//         signofproducts = "please enter a valid number"
+//     }
+//     document.getgetElementById("riddle-button2").innerHTML = signofproducts;
+//     //Here I tried to account for all possible outcomes and planning an alert for what would happen if such event were to occur. If the user entered any amounts of 0 in a slot, the outcome would result in a 0 so in order to prevent a lot of invalids come up, I made a "neutral" alert which told the useer their product isn't positive or negative
+// }
 
 //Javascript Exercise #3 Sorting 3 Integers
 function ThreeNumberSort () {
-    let var1, var2, var3;
     let output = ""
     let var1 = parseInt(prompt ("Please enter your first integer"));
     let var2 = parseInt(prompt ("Please enter your second integer"));
@@ -150,6 +164,7 @@ function ThreeNumberSort () {
     else if (var3 > var1 && var1 > var2) {
         output = ('Your third integer is the largest, followed by the first and the second is the least of the three');
     //If the user’s third integer is the largest, followed by second and the first is the least
+    }
     else if (var3 > var2 && var2 > var1) {
         output = ('Your third integer is the largest, followed by the second and the first is the least of the three');
     }
@@ -161,7 +176,7 @@ function ThreeNumberSort () {
 }
 
 //Javascript Exercise #4 Adding all multiples of 3 under 1000 using loops
-function ForSumThrees () {
+function ForSumThrees() {
     let forsumthreesunder1000 = 0
     //this is saying that the initial sum is 0
     for (let x = 0; x < 1000; x +=3) {
@@ -217,6 +232,8 @@ function ThirdAngle () {
     if (sum < 180 && sum > 0) {
         x = 180 - sum
         alert (x)
-    else 
+    }
+    else {
         alert ('Invalid characters Please try again')
+    }
 }
