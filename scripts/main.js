@@ -125,34 +125,38 @@ function LargerNumber() {
 //Javascript Exercise #3 Sorting 3 Integers
 function ThreeNumberSort () {
     let var1, var2, var3;
-    let var1 = prompt ("Please enter your first integer")
-    let var2 = prompt ("Please enter your second integer")
-    let var3 = prompt ("Please enter your third integer")
+    let output = ""
+    let var1 = parseInt(prompt ("Please enter your first integer"));
+    let var2 = parseInt(prompt ("Please enter your second integer"));
+    let var3 = parseInt(prompt ("Please enter your third integer"));
     //With this code, I meant to tell the system that I want var1, var2 and var3 to represent the 3 integers that will be sorted.
     //If the user’s first integer is the largest, followed by second and the third is the least
     if (var1 > var2 && var2 > var3) {
-        alert ('Your first integer is the largest, followed by the second and the third is the least of the three');
+        output = ('Your first integer is the largest, followed by the second and the third is the least of the three');
     }
     //If the user’s first integer is the largest, followed by third and the second is the least
     else if (var1 > var3 && var3 > var2) {
-        alert ('Your first integer is the largest, followed by the third and the second is the least of the three');
+        output = ('Your first integer is the largest, followed by the third and the second is the least of the three');
     }
     //If the user’s second integer is the largest, followed by first and the third is the least
     else if (var2 > var1 && var1 > var3) {
-        alert ('Your second integer is the largest, followed by the first and the third is the least of the three');
+        output = ('Your second integer is the largest, followed by the first and the third is the least of the three');
     }
     //If the user’s second integer is the largest, followed by third and the second is the least
     else if (var2 > var3 && var3 > var1) {
-        alert ('Your second integer is the largest, followed by the third and the first is the least of the three');
+        output = ('Your second integer is the largest, followed by the third and the first is the least of the three');
     }
     //If the user’s third integer is the largest, followed by first and the second is the least
     else if (var3 > var1 && var1 > var2) {
-        alert ('Your third integer is the largest, followed by the first and the second is the least of the three');
+        output = ('Your third integer is the largest, followed by the first and the second is the least of the three');
     //If the user’s third integer is the largest, followed by second and the first is the least
     else if (var3 > var2 && var2 > var1) {
-        alert ('Your third integer is the largest, followed by the second and the first is the least of the three');
+        output = ('Your third integer is the largest, followed by the second and the first is the least of the three');
     }
-        else {
+    else {
+        output = ('Invalid character unable to process');
+    }
+    document.getgetElementById("riddle-button3").innerHTML = output;
     //I'm not too sure how to perform this task using loops so I mapped out all possible pathways and made an alert to demonstrate what the answer would be based on the variables user's entered
 }
 
