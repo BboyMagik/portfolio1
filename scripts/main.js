@@ -116,27 +116,6 @@ function SignofProduct() {
     document.getElementById("riddle-button2").innerHTML = plusminus;
 }
     
-    //Here I'm trying to say that num1, num2 and num3 will be my variables and the 3 integers that will be multiplied to find the sign
-    
-// ()num1 * num2 * num3 if product == 0 {
-//         plusminus =  "Your product is neutral";
-//     }
-
-//     else if (num1 * num2 * num3 < 0) {
-//         plusminus = "Your product is negative";
-//     }
-
-//     else if (num1 * num2 * num3 == 0) {
-//         plusminus = "Your product is neutral"
-//     }
-
-//     else {
-//         signofproducts = "please enter a valid number"
-//     }
-//     document.getgetElementById("riddle-button2").innerHTML = signofproducts;
-//     //Here I tried to account for all possible outcomes and planning an alert for what would happen if such event were to occur. If the user entered any amounts of 0 in a slot, the outcome would result in a 0 so in order to prevent a lot of invalids come up, I made a "neutral" alert which told the useer their product isn't positive or negative
-// }
-
 //Javascript Exercise #3 Sorting 3 Integers
 function ThreeNumberSort () {
     let output = ""
@@ -178,54 +157,69 @@ function ThreeNumberSort () {
 //Javascript Exercise #4 Adding all multiples of 3 under 1000 using loops
 function ForSumThrees() {
     let forsumthreesunder1000 = 0
-    //this is saying that the initial sum is 0
+    //this is saying that the total sum is 0 and the variable I'll be using to represent the sum is "forsumthreesunder1000"
     for (let x = 0; x < 1000; x +=3) {
     }
+    
     if (x % 3 === 0) {
     }
+    //here I am stating that the initial sum starts at a value of 0 and adds the multiple of 3 as everytime it's increased by a multiple of 3 as long as it's under 1000
     forsumthreesunder1000 += x;
-        alert (forsumthreesunder1000);
+        output = (forsumthreesunder1000);
+    document.getgetElementById("riddle-button4").innerHTML = output;
     //This allows the my variable (forsumthreesunder1000) increase exponentially as the multiple we're adding evertime is increasing. It also means that whenever "x" is increased by 3, the same number gets translated to the variable.
 }
 
 //Javascript Exercise #5 Adding all multiples of 3 under 1000 using while loops
 function WhileSumThrees () {
-    let forsumthreesunder1000 = 0
+    let whilesumthreesunder1000 = 0
     let x = 0
+    //I'll be using the same "x" to represent the sum added to the total sum "whilesumthreesunder1000"
     while (x < 1000) {
-		forsumthreesunder1000 += x;
+		whilesumthreesunder1000 += x;
 		x = x + 3;
-            alert (forsumthreesunder1000)
+            output = (forsumthreesunder1000);
+    //here I'm trying to say that x will increase by 3 every time and the loop will keep running until x is bigger or equal to 1000
     }
+    document.getgetElementById("riddle-button5").innerHTML = output;
     //Whereas in the previous loop the variable (forsumthreesunder1000) increased by 3 every time "x" increased by three, in this loop "x" still increases by 3 and forsumthreeunder1000 increases by "x" so there's exponential growth
 }
 
 //Javascript Exercise #6 Counting from 1-100 but subbing multiples of 4, 10 and both 4 and 10 with the words Four, Ten and Fourten respectively
 function tenFour () {
-    let x = 0 
-    while (x < 100) 
-        x = x + 1;
-    if (x % 4 === 0 && x % 10 === 0) {
+    let numBer = prompt ('Please enter your number under 100')
+    //So here my goal is to ask the user to enter a number from the prompt.
+    while (numBer < 100) 
+    if (numBer % 4 === 0 && numBer % 10 === 0) {
         return ('TenFour')
     } 
-    else if (x % 4 === 0) {
+    else if (numBer % 4 === 0) {
         return ('Four')
     }
-    else if (x % 10 === 0) {
+    else if (numBer % 10 === 0) {
         return ('Ten')
     }
+    else if (numBer % 4 !== 0 && numBer % 100 !==0)
+        return (numBer)
+    else {
+        output = ('Invalid character unable to process');
+    }
+    //So here what I'm trying to say that since this function is supposed to identify which numebrs from 1-100 are multiples of four, ten, four-ten, none of the above or if it's an invalid number. Here, if the user entered the number 11. I wrote (numBer % 4 !== 0 && numBer % 100 !==0) which means that the function will divide 11 by 4, then 11 by 10 and if both are invalid, it'll return the origional number like counting.
+    document.getgetElementById("riddle-button6").innerHTML = output;
 }
 
 //Javascript Exercise #7 Determining the Century based on the year entered
 function CenturyFromYear () {
     let year = prompt ('Please insert your year here')
-    let century = (year % 100) + 1
+    let century = (year/100) + 1
         alert (century)
 }
 
 //Javascript Exercise #8 Finding the 3rd angle of a triangle using 2 existing angles
 function ThirdAngle () {
     let angleOne, angleTwo;
+    let sum = angleOne + angleTwo;
+    let x = 180 - sum;
     angleOne = prompt ('Please enter your first angle here')
     angleTwo = prompt ('Please enter your second angle here')
     sum = angleOne + angleTwo
@@ -233,7 +227,22 @@ function ThirdAngle () {
         x = 180 - sum
         alert (x)
     }
-    else {
+    else if (sum > 180) {
         alert ('Invalid characters Please try again')
     }
+    else if (sum < 0) {
+        alert ('Invalid characters Please try again')
+    }
+    document.getgetElementById("riddle-button8").innerHTML = output;
+}
+//So, with this function, I'm basically stating that the two variables I'll be using are angleOne and angleTwo. Then I stated that I want to add these two variables. This third, new variable will be called sum. I then say if sum is less than 180 and it's positive, I'll subtract 180 by our sum to find the third angle. If the sum is over 180 or negative or anything else, I want to tell them that their entered integers aren't compatible.
+
+//Javascript Encoder
+function MagikEncryption () {
+    
+}
+
+//Javascript Decoder
+function MagikDecryption () {
+
 }
