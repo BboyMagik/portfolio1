@@ -304,6 +304,11 @@ function MagikDecryption () {
     //Here I'm spliting the code into elements to create a string.
     for ( let x = 0; x < magikTextD.length; x = x + 1) {
     }
+    encryptedMessage[i] = encryptedMessage[i].replace("!j2qs", " "); 
+	encryptedMessage[i] = encryptedMessage[i].replace("wf2", " ");
+    encryptedMessage[i] = encryptedMessage[i].replace("pk3a5", " "); 
+    encryptedMessage[i] = encryptedMessage[i].replace("D12", " "); 
+    encryptedMessage[i] = encryptedMessage[i].replace("hIf5reia?1", " "); 
     if (magikTextE[x].length > 3) {
         getLetter
     }
