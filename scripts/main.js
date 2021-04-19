@@ -261,13 +261,13 @@ function MagikEncryption () {
         savedLetter1 = magikTextE[x][0];
         savedLetter2 = magikTextE[x][1];
         scramblescramble += (magikTextE[x]).slice(2);
-        scramblescramble += "wf2" + savedLetter2 + "pk3a5" + savedLetter1 + "qhf2" + " ";
+        scramblescramble += "wf2" + savedLetter2 + "pk3a5" + savedLetter1 + " ";
     //I did the same thing as above but with less variables for if the user entered something with 3 integers.
     }
     else if (magikTextE[x].length === 2) {
         savedLetter1 = magikTextE[x][0];
         scramblescramble += (magikTextE[x]).slice(1);
-        scramblescramble += "Pg13" + "KB24" + savedLetter1 + "Melo7" + "KD35" + "Russ0" + "D12" + " ";
+        scramblescramble += savedLetter1 + "D12" + " ";
     }
     //Here I accounted for if the user entered something with 2 variables
     else {
@@ -282,5 +282,39 @@ function MagikEncryption () {
 
 //Javascript Decoder
 function MagikDecryption () {
-
+    let magikTextD = prompt ('Enter your magik code here');
+    let unscramblescramble = "";
+    let getLetter1 = "";
+    let getLetter2 = "";
+    let getLetter3 = "";
+    let getLetter12 = "";
+    let getLetter13 = "";
+    let getLetter21 = "";
+    let getLetter23 = "";
+    let getLetter31 = "";
+    let getLetter32 = "";
+    let getLetter123 = "";
+    let getLetter132 = "";
+    let getLetter213 = "";
+    let getLetter231 = "";
+    let getLetter312 = "";
+    let getLetter321 = "";
+    //Here I stated the variables I'll be using with magikTextD representing decryption. I am kinda dumb so the only way I thought of to decrease the size and make my function cleaner looking in general down the raod was to map all possible combinations of my 3 integers. I won't use all of them ofc but just in case.
+    magikTextD = magikTextD.split (" ");
+    //Here I'm spliting the code into elements to create a string.
+    for ( let x = 0; x < magikTextD.length; x = x + 1) {
+    }
+    if (magikTextE[x].length > 3) {
+        getLetter
+    }
+    else if (magikTextE[x].length === 3) {
+        getLetter
+    }
+    else if (magikTextE[x].length === 2) {
+        getLetter
+    }
+    else {
+        getLetter
+    }
+    document.getgetElementById("decrypt-button").innerHTML = output;
 }
