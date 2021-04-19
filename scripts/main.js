@@ -239,7 +239,13 @@ function ThirdAngle () {
 
 //Javascript Encoder
 function MagikEncryption () {
-    
+    let magikTextE = prompt ('Enter your text here')
+    let cypherText = "";
+    let firstLetter = "";
+    //Here, I just stated the variables I'll be using "cypherText" and "firstLetter". I also made magikTextE (variable for origional text) prompt the user to enter their word(s). I close magikTextE as my variable since magik is my nickname, it's a text and the e stands for encode.
+    magikTextE = MagikTextE.split (" ");
+    //Here I'm saying that the origional user entered text will be split at every space (" "). I think this would be splitting the origional user entered text into elements and creating a list.
+
 }
 
 //Javascript Decoder
