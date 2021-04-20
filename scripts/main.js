@@ -253,7 +253,6 @@ function MagikEncryption () {
     magikTextE = magikTextE.split (" ");
     //Here I'm saying that the origional user entered text will be split at every space (" "). I think this would be splitting the origional user entered text into elements and creating a list.
     for (let x = 0; x < magikTextE.length; x = x + 1) {
-    }
     if (magikTextE[x].length > 3) {
         savedLetter1biggerthan3 = magikTextE[x][0];
         savedLetter2biggerthan3 = magikTextE[x][1];
