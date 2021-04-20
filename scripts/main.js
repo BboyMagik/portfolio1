@@ -253,30 +253,31 @@ function MagikEncryption () {
     magikTextE = magikTextE.split (" ");
     //Here I'm saying that the origional user entered text will be split at every space (" "). I think this would be splitting the origional user entered text into elements and creating a list.
     for (let x = 0; x < magikTextE.length; x = x + 1) {
-    if (magikTextE[x].length > 3) {
-        savedLetter1biggerthan3 = magikTextE[x][0];
-        savedLetter2biggerthan3 = magikTextE[x][1];
-        savedLetter3biggerthan3 = magikTextE[x][2];
-        scramblescramble += (magikTextE[x]).slice(3);
-    scramblescramble += savedLetter1biggerthan3 + "!j2qs" + savedLetter3biggerthan3 + savedLetter2biggerthan3 + " ";
-    }
-    //Here, I tried clarifying that my goal is to check every word/element represented by the variable "x". Next, I stated that if the user entered text is above 3 digits, I'd run the processes beneath it. The first of these processes is that I'll save the first letter in the user's text with the variable "savedLetter1", the 2nd one "savedLetter2" and the third one "savedLetter3". Next, I would slice off the first 3 letters and save the remaining integers in the variable "scramblescramble". Finally, what I did was adding the saved integers in "scramblescramble" with the integer in "savedLetter1", then added "!j2qs" to make it look messy, then added the integer in "savedLetter3" and finally the integer in "savedLetter2". For example, my favourite word "indubitably" would be changed into ubitablyi!j2qsdn. This doesn't look as strange with longer words but with 5-6 letter words, it'll be nearly impossible to tell without having inside knowledge!
-    else if (magikTextE[x].length === 3) {
-        savedLetter1equalto3 = magikTextE[x][0];
-        savedLetter2equalto3 = magikTextE[x][1];
-        scramblescramble += (magikTextE[x]).slice(2);
-        scramblescramble += "wf2" + savedLetter2equalto3 + "pk3a5" + savedLetter1equalto3 + " ";
-    //I did the same thing as above but with less variables for if the user entered something with 3 integers.
-    }
-    else if (magikTextE[x].length === 2) {
-        savedLetter1equalto2 = magikTextE[x][0];
-        scramblescramble += (magikTextE[x]).slice(1);
-        scramblescramble += savedLetter1equalto2 + "D12" + " ";
-    }
-    //Here I accounted for if the user entered something with 2 variables
-    else {
-        savedLetter1equalto1 = (magikTextE[x][0])
-        savedLetter1equalto1 += "hIf5reia?1" + " ";
+        if (magikTextE[x].length > 3) {
+            savedLetter1biggerthan3 = magikTextE[x][0];
+            savedLetter2biggerthan3 = magikTextE[x][1];
+            savedLetter3biggerthan3 = magikTextE[x][2];
+            scramblescramble += (magikTextE[x]).slice(3);
+        scramblescramble += savedLetter1biggerthan3 + "!j2qs" + savedLetter3biggerthan3 + savedLetter2biggerthan3 + " ";
+        }
+        //Here, I tried clarifying that my goal is to check every word/element represented by the variable "x". Next, I stated that if the user entered text is above 3 digits, I'd run the processes beneath it. The first of these processes is that I'll save the first letter in the user's text with the variable "savedLetter1", the 2nd one "savedLetter2" and the third one "savedLetter3". Next, I would slice off the first 3 letters and save the remaining integers in the variable "scramblescramble". Finally, what I did was adding the saved integers in "scramblescramble" with the integer in "savedLetter1", then added "!j2qs" to make it look messy, then added the integer in "savedLetter3" and finally the integer in "savedLetter2". For example, my favourite word "indubitably" would be changed into ubitablyi!j2qsdn. This doesn't look as strange with longer words but with 5-6 letter words, it'll be nearly impossible to tell without having inside knowledge!
+        else if (magikTextE[x].length === 3) {
+            savedLetter1equalto3 = magikTextE[x][0];
+            savedLetter2equalto3 = magikTextE[x][1];
+            scramblescramble += (magikTextE[x]).slice(2);
+            scramblescramble += "wf2" + savedLetter2equalto3 + "pk3a5" + savedLetter1equalto3 + " ";
+        //I did the same thing as above but with less variables for if the user entered something with 3 integers.
+        }
+        else if (magikTextE[x].length === 2) {
+            savedLetter1equalto2 = magikTextE[x][0];
+            scramblescramble += (magikTextE[x]).slice(1);
+            scramblescramble += savedLetter1equalto2 + "D12" + " ";
+        }
+        //Here I accounted for if the user entered something with 2 variables
+        else {
+            savedLetter1equalto1 = (magikTextE[x][0])
+            savedLetter1equalto1 += "hIf5reia?1" + " ";
+        }
     }
     //Since the user's entered thing wasn't more than 3 digits, 3 digits or 2 digits, I'd say it's safe to assume it's only one digit. In that case, I just saves their one digit in the variable "savedLetter1". Finally, I added the saved integer now in "savedLetter1" to hIf5reia?1.
     alert (magikTextE + "is" + scramblescramble + "in magik")
@@ -303,14 +304,14 @@ function MagikDecryption () {
     let getLetter321 = "";
     let getmostletters = ""; 
     //Here I stated the variables I'll be using with magikTextD representing decryption. I am kinda dumb so the only way I thought of to decrease the size and make my function cleaner looking in general down the raod was to map all possible combinations of my 3 integers. I won't use all of them ofc but just in case.
-    scramblescramble = scramblescramble.split (" ");
+    magikTextD = magikTextD.split (" ");
     //Here I'm spliting the code into elements to create a string.
     for ( let x = 0; x < magikTextE.length; x = x + 1) {
-        magikText[x] = [x].replace("!j2qs", " "); 
-        magikText[x] = magikText[x].replace("wf2", " ");
-        magikText[x] = magikText[x].replace("pk3a5", " "); 
-        magikText[x] = magikText[x].replace("D12", " "); 
-        magikText[x] = magikText[x].replace("hIf5reia?1", " ");
+        magikText[x] = [x].replace("!j2qs", ""); 
+        magikText[x] = magikText[x].replace("wf2", "");
+        magikText[x] = magikText[x].replace("pk3a5", ""); 
+        magikText[x] = magikText[x].replace("D12", ""); 
+        magikText[x] = magikText[x].replace("hIf5reia?1", "");
     }
     //My goal here was to remove all my useless integers that don't signal the user's word.I want to leave letters only from their word
     if (magikTextE[x].length > 3) {
@@ -337,6 +338,5 @@ function MagikDecryption () {
     }
     alert ("Your Message is" + magikTextD)
     document.getElementById("decrypt-button").innerHTML = output;
-    //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts
-    
+    //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts 
 }
