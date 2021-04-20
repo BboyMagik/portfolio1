@@ -339,3 +339,6 @@ function MagikDecryption () {
     alert ("Your Message is" ,magikTextD)
     document.getgetElementById("decrypt-button").innerHTML = output;
 }
+
+//After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again
+//but it didn't work properly xDD guess there's no shortcuts
