@@ -150,7 +150,7 @@ function ThreeNumberSort () {
     else {
         output = ('Invalid character unable to process');
     }
-    document.getgetElementById("riddle-button3").innerHTML = output;
+    document.getElementById("riddle-button3").innerHTML = output;
     //I'm not too sure how to perform this task using loops so I mapped out all possible pathways and made an alert to demonstrate what the answer would be based on the variables user's entered
 }
 
@@ -166,7 +166,7 @@ function ForSumThrees() {
     //here I am stating that the initial sum starts at a value of 0 and adds the multiple of 3 as everytime it's increased by a multiple of 3 as long as it's under 1000
     forsumthreesunder1000 += x;
         output = (forsumthreesunder1000);
-    document.getgetElementById("riddle-button4").innerHTML = output;
+    document.getElementById("riddle-button4").innerHTML = output;
     //This allows the my variable (forsumthreesunder1000) increase exponentially as the multiple we're adding evertime is increasing. It also means that whenever "x" is increased by 3, the same number gets translated to the variable.
 }
 
@@ -181,7 +181,7 @@ function WhileSumThrees () {
             output = (forsumthreesunder1000);
     //here I'm trying to say that x will increase by 3 every time and the loop will keep running until x is bigger or equal to 1000
     }
-    document.getgetElementById("riddle-button5").innerHTML = output;
+    document.getElementById("riddle-button5").innerHTML = output;
     //Whereas in the previous loop the variable (forsumthreesunder1000) increased by 3 every time "x" increased by three, in this loop "x" still increases by 3 and forsumthreeunder1000 increases by "x" so there's exponential growth
 }
 
@@ -205,7 +205,7 @@ function tenFour () {
         output = ('Invalid character unable to process');
     }
     //So here what I'm trying to say that since this function is supposed to identify which numebrs from 1-100 are multiples of four, ten, four-ten, none of the above or if it's an invalid number. Here, if the user entered the number 11. I wrote (numBer % 4 !== 0 && numBer % 100 !==0) which means that the function will divide 11 by 4, then 11 by 10 and if both are invalid, it'll return the origional number like counting.
-    document.getgetElementById("riddle-button6").innerHTML = output;
+    document.getElementById("riddle-button6").innerHTML = output;
 }
 
 //Javascript Exercise #7 Determining the Century based on the year entered
@@ -233,7 +233,7 @@ function ThirdAngle () {
     else if (sum < 0) {
         alert ('Invalid characters Please try again')
     }
-    document.getgetElementById("riddle-button8").innerHTML = output;
+    document.getElementById("riddle-button8").innerHTML = output;
 }
 //So, with this function, I'm basically stating that the two variables I'll be using are angleOne and angleTwo. Then I stated that I want to add these two variables. This third, new variable will be called sum. I then say if sum is less than 180 and it's positive, I'll subtract 180 by our sum to find the third angle. If the sum is over 180 or negative or anything else, I want to tell them that their entered integers aren't compatible.
 
@@ -258,7 +258,7 @@ function MagikEncryption () {
         savedLetter2biggerthan3 = magikTextE[x][1];
         savedLetter3biggerthan3 = magikTextE[x][2];
         scramblescramble += (magikTextE[x]).slice(3);
-        scramblescramble += savedLetter1biggerthan3 + "!j2qs" + savedLetter3biggerthan3 + savedLetter2biggerthan3 + " ";
+    scramblescramble += savedLetter1biggerthan3 + "!j2qs" + savedLetter3biggerthan3 + savedLetter2biggerthan3 + " ";
     }
     //Here, I tried clarifying that my goal is to check every word/element represented by the variable "x". Next, I stated that if the user entered text is above 3 digits, I'd run the processes beneath it. The first of these processes is that I'll save the first letter in the user's text with the variable "savedLetter1", the 2nd one "savedLetter2" and the third one "savedLetter3". Next, I would slice off the first 3 letters and save the remaining integers in the variable "scramblescramble". Finally, what I did was adding the saved integers in "scramblescramble" with the integer in "savedLetter1", then added "!j2qs" to make it look messy, then added the integer in "savedLetter3" and finally the integer in "savedLetter2". For example, my favourite word "indubitably" would be changed into ubitablyi!j2qsdn. This doesn't look as strange with longer words but with 5-6 letter words, it'll be nearly impossible to tell without having inside knowledge!
     else if (magikTextE[x].length === 3) {
@@ -280,7 +280,7 @@ function MagikEncryption () {
     }
     //Since the user's entered thing wasn't more than 3 digits, 3 digits or 2 digits, I'd say it's safe to assume it's only one digit. In that case, I just saves their one digit in the variable "savedLetter1". Finally, I added the saved integer now in "savedLetter1" to hIf5reia?1.
     alert (magikTextE + "is" + scramblescramble + "in magik")
-    document.getgetElementById("encrypt-button").innerHTML = output;
+    document.getElementById("encrypt-button").innerHTML = output;
 }
 
 //Javascript Decoder
@@ -336,6 +336,6 @@ function MagikDecryption () {
     //Since the integers I added to make the code look more anonymous was already removed, there should only be one letter here. So I sliced it and put it into "magikTextD"
     }
     alert ("Your Message is" ,magikTextD)
-    document.getgetElementById("decrypt-button").innerHTML = output;
+    document.getElementById("decrypt-button").innerHTML = output;
     //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts
-}
+    
