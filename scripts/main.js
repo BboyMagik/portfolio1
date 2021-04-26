@@ -318,29 +318,29 @@ function MagikDecryption () {
         magikText[x] = magikText[x].replace("hIf5reia?1", "");
     }
     //My goal here was to remove all my useless integers that don't signal the user's word.I want to leave letters only from their word
-    if (magikTextE[x].length > 3) {
+    if (magikTextD[x].length > 3) {
         getLetter132 += savedLetter1biggerthan3 + savedLetter2biggerthan3 + savedLetter3biggerthan3;
     //my goal here was to make get letter 132 now contiain the first 3 letters of the user's entered word
-        getmostletters += (magikTextE[x]).slice();
+        getmostletters += (magikTextD[x]).slice();
     //Since I already copied organised the first 3 letters and they're not in the code anymore, the rest of the integers in the code should all be in order starting from the user's 4th integer. Here, I'm trying to slive everything and save it to "getmostletters"
         magikTextD = getLetter132 + getmostletters;
     //Since "getLetter132" has our  first 3 letters and "getmostletters" has the rest, we should be ok just combining them. The final variable containing the whole word will be "magikTextD"
         alert ("Your Message is" + magikTextD)
     }
-    else if (magikTextE[x].length === 3) {
+    else if (magikTextD[x].length === 3) {
         getLetter21 += savedLetter1equalto3 + savedLetter2equalto3;
-        getmostletters += (magikTextE[x]).slice();
+        getmostletters += (magikTextD[x]).slice();
         magikTextD = getLetter21 + getmostletters;
         alert ("Your Message is" + magikTextD)
     }
-    else if (magikTextE[x].length === 2) {
+    else if (magikTextD[x].length === 2) {
         getLetter1 += savedLetter1equalto2;
-        getmostletters += (magikTextE[x]).slice();
+        getmostletters += (magikTextD[x]).slice();
         magikTextD = getLetter1 + getmostletters;
         alert ("Your Message is" + magikTextD)
     }
     else {
-        magikTextD += (magikTextE[x]).slice(0);
+        magikTextD += (magikTextD[x]).slice(0);
         alert ("Your Message is" + magikTextD)
     //Since the integers I added to make the code look more anonymous was already removed, there should only be one letter here. So I sliced it and put it into "magikTextD"
     }
