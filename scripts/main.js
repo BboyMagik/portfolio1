@@ -305,7 +305,7 @@ function MagikDecryption () {
     //Here I stated the variables I'll be using with magikTextD representing decryption. I am kinda dumb so the only way I thought of to decrease the size and make my function cleaner looking in general down the raod was to map all possible combinations of my 3 integers. I won't use all of them ofc but just in case.
     magikTextD = magikTextD.split (" ");
     //Here I'm spliting the code into elements to create a string.
-    for ( let x = 0; x < magikTextE.length; x = x + 1) {
+    for ( let x = 0; x < magikTextD.length; x = x + 1) {
         magikText[x] = [x].replace("!j2qs", ""); 
         magikText[x] = magikText[x].replace("wf2", "");
         magikText[x] = magikText[x].replace("pk3a5", ""); 
