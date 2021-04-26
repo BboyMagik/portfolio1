@@ -336,6 +336,5 @@ function MagikDecryption () {
     //Since the integers I added to make the code look more anonymous was already removed, there should only be one letter here. So I sliced it and put it into "magikTextD"
     }
     alert ("Your Message is" + magikTextD)
-    document.getElementById("decrypt-button").innerHTML = output;
     //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts 
 }
