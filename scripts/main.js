@@ -281,7 +281,6 @@ function MagikEncryption () {
     }
     //Since the user's entered thing wasn't more than 3 digits, 3 digits or 2 digits, I'd say it's safe to assume it's only one digit. In that case, I just saves their one digit in the variable "savedLetter1". Finally, I added the saved integer now in "savedLetter1" to hIf5reia?1.
     alert (magikTextE + "is" + scramblescramble + "in magik")
-    document.getElementById("encrypt-button").innerHTML = output;
 }
 
 //Javascript Decoder
