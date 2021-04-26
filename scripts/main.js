@@ -325,21 +325,24 @@ function MagikDecryption () {
     //Since I already copied organised the first 3 letters and they're not in the code anymore, the rest of the integers in the code should all be in order starting from the user's 4th integer. Here, I'm trying to slive everything and save it to "getmostletters"
         magikTextD = getLetter132 + getmostletters;
     //Since "getLetter132" has our  first 3 letters and "getmostletters" has the rest, we should be ok just combining them. The final variable containing the whole word will be "magikTextD"
+        alert ("Your Message is" + magikTextD)
     }
     else if (magikTextE[x].length === 3) {
         getLetter21 += savedLetter1equalto3 + savedLetter2equalto3;
         getmostletters += (magikTextE[x]).slice();
         magikTextD = getLetter21 + getmostletters;
+        alert ("Your Message is" + magikTextD)
     }
     else if (magikTextE[x].length === 2) {
         getLetter1 += savedLetter1equalto2;
         getmostletters += (magikTextE[x]).slice();
         magikTextD = getLetter1 + getmostletters;
+        alert ("Your Message is" + magikTextD)
     }
     else {
         magikTextD += (magikTextE[x]).slice(0);
+        alert ("Your Message is" + magikTextD)
     //Since the integers I added to make the code look more anonymous was already removed, there should only be one letter here. So I sliced it and put it into "magikTextD"
     }
-    alert ("Your Message is" + magikTextD)
     //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts 
 }
