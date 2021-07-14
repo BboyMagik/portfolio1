@@ -63,286 +63,400 @@ function message9() {
     alert ('Since you did such a good job, I would like to reward you with not one but 2 riddles! I find them hilarious and I hope you like them too! Riddle number one: What Type of Coat is Always Wet When You Put it On? Answer: A coat of paint! Riddle number 2: What Makes YOU Young? Answer: NG! xDD I hope you enjoyed and thank you once more for playing!');
 }
 
-//Javascript Exercise #1 Output Larger of 2 Sums
+
 function LargerNumber() {
-    let Num1 = prompt("Please enter your first integer");
-    let Num2 = prompt("Please enter your second integer");
-    let biggerNum = "";
-
-    //Here I tried to clarify that  Num1 and Num2 will be my valuables and that the user will be asked to insert ther integer upon clicking this button
+    let num1, num2;
+    num1 = window.prompt("Input the First integer", "0");
+    num2 = window.prompt("Input the Second integer", "0");
     
-    if (Num1 == Num2){
-        biggerNum = "Both are Equal";
-    }
-
-    else if (Num1 > Num2){
-        biggerNum = Num1;
-    }
-
-    else if (Num1 < Num2){
-        biggerNum = Num2;
-    }
-
-    else {
-        biggerNum = "The characters you entered are not integers. Please try again";
-    }
-    document.getElementById("riddle-button1").innerHTML = biggerNum
-    //Here I accounted for all the different potential outcomes and told the computer what to send in case a similar situation occured. If the characters entered didn't fit any rules, the user may have entered a letter or another unuseable character
-}
-
-//Javascript Exercise #2 Finding the sign of the product from 3 numbers {
-function SignofProduct() {
-    let num1 = prompt ("Please enter your first integer");
-    let num2 = prompt ("Please enter your second integer");
-    let num3 = prompt ("your third integer");
-    let plusminus = "";
-    let product = num1 * num2 * num3;
-    if (product == 0) {
-        plusminus =  "Your product is neutral";
-    }
-        
-    else if (product < 0) {
-        plusminus = "Your product is negative";
-    }
-
-    else if (product > 0) {
-        plusminus = "Your product is positive";
-    }
-        
-    else {
-        plusminus = "please enter a valid number"
-    }
-
-    document.getElementById("riddle-button2").innerHTML = plusminus;
-}
+    // num1 and num2 are variables. They represent the integers inputted by the user
     
-//Javascript Exercise #3 Sorting 3 Integers
-function ThreeNumberSort () {
-    let output = ""
-    let var1 = parseInt(prompt ("Please enter your first integer"));
-    let var2 = parseInt(prompt ("Please enter your second integer"));
-    let var3 = parseInt(prompt ("Please enter your third integer"));
-    //With this code, I meant to tell the system that I want var1, var2 and var3 to represent the 3 integers that will be sorted.
-    //If the user’s first integer is the largest, followed by second and the third is the least
-    if (var1 > var2 && var2 > var3) {
-        output = ('Your first integer is the largest, followed by the second and the third is the least of the three');
-    }
-    //If the user’s first integer is the largest, followed by third and the second is the least
-    else if (var1 > var3 && var3 > var2) {
-        output = ('Your first integer is the largest, followed by the third and the second is the least of the three');
-    }
-    //If the user’s second integer is the largest, followed by first and the third is the least
-    else if (var2 > var1 && var1 > var3) {
-        output = ('Your second integer is the largest, followed by the first and the third is the least of the three');
-    }
-    //If the user’s second integer is the largest, followed by third and the second is the least
-    else if (var2 > var3 && var3 > var1) {
-        output = ('Your second integer is the largest, followed by the third and the first is the least of the three');
-    }
-    //If the user’s third integer is the largest, followed by first and the second is the least
-    else if (var3 > var1 && var1 > var2) {
-        output = ('Your third integer is the largest, followed by the first and the second is the least of the three');
-    //If the user’s third integer is the largest, followed by second and the first is the least
-    }
-    else if (var3 > var2 && var2 > var1) {
-        output = ('Your third integer is the largest, followed by the second and the first is the least of the three');
-    }
+    if(num1 > num2) { 
+      alert ("The larger of "+ num1+ " and "+ num2+ " is "+ num1+ ".");
+      }   
+    else if(num1 < num2) {
+      alert ("The larger of "+ num1+" and "+ num2+ " is "+ num2+ ".");
+      }                  
     else {
-        output = ('Invalid character unable to process');
-    }
-    document.getElementById("riddle-button3").innerHTML = output;
-    //I'm not too sure how to perform this task using loops so I mapped out all possible pathways and made an alert to demonstrate what the answer would be based on the variables user's entered
-}
-
-//Javascript Exercise #4 Adding all multiples of 3 under 1000 using loops
-function ForSumThrees() {
-    let forsumthreesunder1000 = 0
-    //this is saying that the total sum is 0 and the variable I'll be using to represent the sum is "forsumthreesunder1000"
-    for (let x = 0; x < 1000; x +=3) {
-    }
+       alert ("The values "+ num1+ " and "+num2+ " are equal.");
+      }
+      }
     
-    if (x % 3 === 0) {
-    }
-    //here I am stating that the initial sum starts at a value of 0 and adds the multiple of 3 as everytime it's increased by a multiple of 3 as long as it's under 1000
-    forsumthreesunder1000 += x;
-        output = (forsumthreesunder1000);
-    document.getElementById("riddle-button4").innerHTML = output;
-    //This allows the my variable (forsumthreesunder1000) increase exponentially as the multiple we're adding evertime is increasing. It also means that whenever "x" is increased by 3, the same number gets translated to the variable.
-}
-
-//Javascript Exercise #5 Adding all multiples of 3 under 1000 using while loops
-function WhileSumThrees () {
-    let whilesumthreesunder1000 = 0
-    let x = 0
-    //I'll be using the same "x" to represent the sum added to the total sum "whilesumthreesunder1000"
-    while (x < 1000) {
-		whilesumthreesunder1000 += x;
-		x = x + 3;
-            output = (forsumthreesunder1000);
-    //here I'm trying to say that x will increase by 3 every time and the loop will keep running until x is bigger or equal to 1000
-    }
-    document.getElementById("riddle-button5").innerHTML = output;
-    //Whereas in the previous loop the variable (forsumthreesunder1000) increased by 3 every time "x" increased by three, in this loop "x" still increases by 3 and forsumthreeunder1000 increases by "x" so there's exponential growth
-}
-
-//Javascript Exercise #6 Counting from 1-100 but subbing multiples of 4, 10 and both 4 and 10 with the words Four, Ten and Fourten respectively
-function tenFour () {
-    let numBer = prompt ('Please enter your number under 100')
-    //So here my goal is to ask the user to enter a number from the prompt.
-    while (numBer < 100) 
-    if (numBer % 4 === 0 && numBer % 10 === 0) {
-        return ('TenFour')
+    // The if else statement is used to identify which number is bigger between the two. If num1 is bigger 
+    // than num2, the function largerNumber will return the alert that num 1 is bigger than num 2. If num2 is bigger 
+    // than num1, the function largerNumber will return the alert that num 2 is bigger than num 1. If both values
+    // are equal, then the function will return an alert that says the two values are equal.
+    
+    
+    
+    function SignofProduct() {
+    let num3, num4, num5;
+    num3 = window.prompt("Input the First integer");
+    num4 = window.prompt("Input the Second integer");
+    num5 = window.prompt("Input the Third integer");
+    
+    // I am declaring the variables num3, num4, and num5. These are the numbers that will be multiplied
+    
+    const product = num3 * num4 * num5
+    
+    // This variable product, represents the product of num3, num4, and num5.
+    
+    if(product > 0) {
+        alert ("The sign of " + product + " is positive. \(+\)");
     } 
-    else if (numBer % 4 === 0) {
-        return ('Four')
+    else if(product < 0){
+        alert ("The sign of " + product + " is negative \(-\)");
     }
-    else if (numBer % 10 === 0) {
-        return ('Ten')
-    }
-    else if (numBer % 4 !== 0 && numBer % 100 !==0)
-        return (numBer)
     else {
-        output = ('Invalid character unable to process');
+        alert("Error. Please Do not leave any fields blank. And please do not input the value 0.")
     }
-    //So here what I'm trying to say that since this function is supposed to identify which numebrs from 1-100 are multiples of four, ten, four-ten, none of the above or if it's an invalid number. Here, if the user entered the number 11. I wrote (numBer % 4 !== 0 && numBer % 100 !==0) which means that the function will divide 11 by 4, then 11 by 10 and if both are invalid, it'll return the origional number like counting.
-    document.getElementById("riddle-button6").innerHTML = output;
-}
-
-//Javascript Exercise #7 Determining the Century based on the year entered
-function CenturyFromYear () {
-    let year = prompt ('Please insert your year here')
-    let century = (year/100) + 1
-        alert (century)
-}
-
-//Javascript Exercise #8 Finding the 3rd angle of a triangle using 2 existing angles
-function ThirdAngle () {
-    let angleOne, angleTwo;
-    let sum = angleOne + angleTwo;
-    let x = 180 - sum;
-    angleOne = prompt ('Please enter your first angle here')
-    angleTwo = prompt ('Please enter your second angle here')
-    sum = angleOne + angleTwo
+    }
+    
+    // This function takes three inputs of three numbers and then finds the sign of its product. First, the variable product,
+    // calculates the product. From there, the if statement determines wether the product is larger than 0 or smaller.
+    // If the product is greater than 0 its positive. If the product is lesser than 0, it is negative. 
+    
+    
+    function ThreeNumberSort() {
+    let numex1, numex2, numex3;
+    numex1 = window.prompt("Input the First integer");
+    numex2 = window.prompt("Input the Second integer");
+    numex3 = window.prompt("Input the Third integer");
+    
+    // numex 1, numex2, and numex3, represent the three integers inputted by the user. 
+    
+    var allTogether = [numex1, numex2, numex3];
+    alert (allTogether.sort(function(a, b){return a-b}));
+    }
+    // I made numex1, numex2, and numex3 into an array and used the sort function to sort the inputted values
+    // in an ascending order. The function (function(a, b){return a-b}). This function defines an alternative sorting order. 
+    // Along with the sort function, this functions is able to sort the numbers inputted by the user from least to 
+    // Greatest as per instructions.
+    
+    function ForSumThrees() {
+    let sum = 0;
+    
+    // I am declaring the variable sum, starting at 0 at the beginning of the function. During the loop, the value of
+    // sum will drastically increase. 
+    
+    for (let i = 0; i < 1000; i +=3)
+    {
+      if (i % 3 === 0)
+      {
+      sum += i;
+      }
+    }
+    
+    console.log (sum);
+    
+    alert (sum);
+    
+    }
+    
+    // This function sets the variable sum to 0 to start with. Then, it adds a multiple of 3 every single time to the sum,
+    // running the loop and building the sum by adding the multiples. This loop's stop condition is when the variable i is
+    // bigger than 1000. Because at that point, we would be using multiples higher than 3 and we don't want that. Everytime
+    // the variable i increases by 3, it adds the value to sum, building it up as the loop goes along. 
+    
+    
+    function WhileSumThrees() {
+        let sum = 0;
+        let x = 0;
+    
+    // Like the for loop. I am declaring the sum 0 before the loop. But I am also declaring the variable x 0 at the 
+    // beginning too.	
+    
+        while (x < 1000) {
+            sum += x;
+            x = x + 3;
+        }
+    
+    // While x < 1000, this loops will continue to run, increasing the value of sum by x and increasing x by itself. Like so
+    // sum increases by 3, then 6, then 9, and so on. But the variable x does not add to itself. It rather 
+    // gets a reassignment. So the value of x will always go up 3 each time while increasing at a consistent rate like so 
+    // (3, 6, 9, 12) while sum increases like (3, 9, 18, 30). Get it? When the statement x < 1000 becomes false, the loop
+    // will stop and your sum will be given.
+    
+    
+    console.log(sum);
+    
+    alert (sum);
+    
+    }
+    
+    
+    
+    function tenFour() {
+    let x = 0;
+    let fourAndTenCountMultiple = 0
+    
+        while (x < 100) {
+        x = x + 1;
+        if (x % 4 === 0 && x % 10 === 0) {
+            fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of TenFour! ");
+        }
+        else if (x % 4 === 0) {
+            fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of Four ");
+        }
+    
+        else if (x % 10 === 0) {
+            fourAndTenCountMultiple += ( ('(') + x + (')') + " is a multiple of Ten ");
+        }
+        else 
+            fourAndTenCountMultiple += ( " | "+ x + " | ");
+        }
+        alert(fourAndTenCountMultiple);
+    }
+    
+    // This function uses the x variable to count through integers 1 to 100. It uses a loop to do this. THis loop
+    // stops working when x is bigger than 100. I use a while loops because a for loop would check for the conditional
+    // statement first. The while loop runs the function then checks if the conditional statement is true. So I am 
+    // able to check if 100 is a multiple of 4 and 10 which it is. Anyways, back to the main topic, the if and the 
+    // if else statements check if x is equal to a multiple of 4 and 10, 4, and 10. If they evaluate to be true, then the 
+    // loop will return a string TenFour, Four, or Ten, depending on which number it is a multiple of. If the number is not 
+    // a multiple of either, then it will return as a normal number.  
+    
+    function tenFour2() {
+    let x = 0;
+    let fourAndTenCountMultiple = 0
+    
+        while (x < 100) {
+        x = x + 1;
+        if (x % 4 === 0 && x % 10 === 0) {
+            fourAndTenCountMultiple += ("TenFour");
+        }
+        else if (x % 4 === 0) {
+            fourAndTenCountMultiple += ("Four");
+        }
+    
+        else if (x % 10 === 0) {
+            fourAndTenCountMultiple += ("Ten");
+        }
+        else 
+            fourAndTenCountMultiple += ( " | "+ x + " | ");
+        }
+        alert(fourAndTenCountMultiple);
+    }
+    
+    // Same as the last function, just returns different statements. 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    function CenturyFromYear() {
+    
+    let year = window.prompt('Input the year');
+    
+    century = Math.floor(year/100) + 1;
+    
+    alert('The century of the year ' + year + ' is the ' + century + ' century');
+    
+    }
+    
+    // In this function, I use two variables, year and century. The user inputs year. The function takes the year, divides 
+    // it by 100, then adds 1 to it and floors it to get the century of the year. For example, if you input the year 1897. 
+    // the function will take 1897, divide it by 100 (18.97) it will then add 1 (19.97) and then math.floor it (19) to get
+    // a whole number. Then, the function will return an alert, telling you what century it is.
+    // The century of the year 1897 is the 19 century.
+    
+    
+    
+    
+    
+    function ThirdAngle() {
+    let angle1, angle2;
+    
+    // I declare the variables angle1 and angle 2 here. 
+    
+    angle1 = window.prompt("Input the First Angle");
+    angle2 = window.prompt("Input the Second Angle");
+    
+    const sum = Number(angle1) + Number(angle2);
+    
     if (sum < 180 && sum > 0) {
-        x = 180 - sum
-        alert (x)
-    }
-    else if (sum > 180) {
-        alert ('Invalid characters Please try again')
-    }
-    else if (sum < 0) {
-        alert ('Invalid characters Please try again')
-    }
-    document.getElementById("riddle-button8").innerHTML = output;
-}
-//So, with this function, I'm basically stating that the two variables I'll be using are angleOne and angleTwo. Then I stated that I want to add these two variables. This third, new variable will be called sum. I then say if sum is less than 180 and it's positive, I'll subtract 180 by our sum to find the third angle. If the sum is over 180 or negative or anything else, I want to tell them that their entered integers aren't compatible.
-
-//Javascript Encoder
-function MagikEncryption () {
-    let magikTextE = prompt ('Enter your text here')
-    let scramblescramble = "";
-    let savedLetter1biggerthan3 = "";
-    let savedLetter2biggerthan3 = "";
-    let savedLetter3biggerthan3 = "";
-    let savedLetter1equalto3 = "";
-    let savedLetter2equalto3 = "";
-    let savedLetter1equalto2 = "";
-    let savedLetter1equalto1 = "";
-    //Here, I just stated the variables I'll be using "scramblescramble" representing the encoded message and "savedLetter1" and "saveLetter2" representing the 1st and 2nd letters the user inputted. I also made magikTextE (variable for origional text) prompt the user to enter their word(s). I close magikTextE as my variable since magik is my nickname, it's a text and the e stands for encode.
-    //After working on decoding I had what I thought was a great idea changing each function's savedLetter variable into different ones to make decoding process easier.
-    magikTextE = magikTextE.split (" ");
-    //Here I'm saying that the origional user entered text will be split at every space (" "). I think this would be splitting the origional user entered text into elements and creating a list.
-    for (let x = 0; x < magikTextE.length; x = x + 1) {
-        if (magikTextE[x].length > 3) {
-            savedLetter1biggerthan3 = magikTextE[x][0];
-            savedLetter2biggerthan3 = magikTextE[x][1];
-            savedLetter3biggerthan3 = magikTextE[x][2];
-            scramblescramble += (magikTextE[x]).slice(3);
-            scramblescramble += savedLetter1biggerthan3 + "!j2qs" + savedLetter3biggerthan3 + savedLetter2biggerthan3 + " ";
-            alert (magikTextE + "is" + scramblescramble + "in magik")
-        }
-        //Here, I tried clarifying that my goal is to check every word/element represented by the variable "x". Next, I stated that if the user entered text is above 3 digits, I'd run the processes beneath it. The first of these processes is that I'll save the first letter in the user's text with the variable "savedLetter1", the 2nd one "savedLetter2" and the third one "savedLetter3". Next, I would slice off the first 3 letters and save the remaining integers in the variable "scramblescramble". Finally, what I did was adding the saved integers in "scramblescramble" with the integer in "savedLetter1", then added "!j2qs" to make it look messy, then added the integer in "savedLetter3" and finally the integer in "savedLetter2". For example, my favourite word "indubitably" would be changed into ubitablyi!j2qsdn. This doesn't look as strange with longer words but with 5-6 letter words, it'll be nearly impossible to tell without having inside knowledge!
-        else if (magikTextE[x].length === 3) {
-            savedLetter1equalto3 = magikTextE[x][0];
-            savedLetter2equalto3 = magikTextE[x][1];
-            scramblescramble += (magikTextE[x]).slice(2);
-            scramblescramble += "wf2" + savedLetter2equalto3 + "pk3a5" + savedLetter1equalto3 + " ";
-            alert (magikTextE + "is" + scramblescramble + "in magik")
-        //I did the same thing as above but with less variables for if the user entered something with 3 integers.
-        }
-        else if (magikTextE[x].length === 2) {
-            savedLetter1equalto2 = magikTextE[x][0];
-            scramblescramble += (magikTextE[x]).slice(1);
-            scramblescramble += savedLetter1equalto2 + "D12" + " ";
-            alert (magikTextE + "is" + scramblescramble + "in magik")
-        }
-        //Here I accounted for if the user entered something with 2 variables
-        else {
-            savedLetter1equalto1 = (magikTextE[x][0])
-            savedLetter1equalto1 += "hIf5reia?1" + " ";
-            alert (magikTextE + "is" + scramblescramble + "in magik")
-        }
-    }
-    //Since the user's entered thing wasn't more than 3 digits, 3 digits or 2 digits, I'd say it's safe to assume it's only one digit. In that case, I just saves their one digit in the variable "savedLetter1". Finally, I added the saved integer now in "savedLetter1" to hIf5reia?1.
-    document.getElementById("encrypt-button").innerHTML
-}
-
-//Javascript Decoder
-function MagikDecryption () {
-    let magikTextE = prompt ('Enter you text here')
-    let magikTextD = prompt ('Enter your magik code here');
-    let getLetter1 = "";
-    let getLetter2 = "";
-    let getLetter3 = "";
-    let getLetter12 = "";
-    let getLetter13 = "";
-    let getLetter21 = "";
-    let getLetter23 = "";
-    let getLetter31 = "";
-    let getLetter32 = "";
-    let getLetter123 = "";
-    let getLetter132 = "";
-    let getLetter213 = "";
-    let getLetter231 = "";
-    let getLetter312 = "";
-    let getLetter321 = "";
-    let getmostletters = ""; 
-    //Here I stated the variables I'll be using with magikTextD representing decryption. I am kinda dumb so the only way I thought of to decrease the size and make my function cleaner looking in general down the raod was to map all possible combinations of my 3 integers. I won't use all of them ofc but just in case.
-    magikTextD = magikTextD.split (" ");
-    //Here I'm spliting the code into elements to create a string.
-    for ( let x = 0; x < magikTextE.length; x = x + 1) {
-        magikText[x] = [x].replace("!j2qs", ""); 
-        magikText[x] = magikText[x].replace("wf2", "");
-        magikText[x] = magikText[x].replace("pk3a5", ""); 
-        magikText[x] = magikText[x].replace("D12", ""); 
-        magikText[x] = magikText[x].replace("hIf5reia?1", "");
-    }
-    //My goal here was to remove all my useless integers that don't signal the user's word.I want to leave letters only from their word
-    if (magikTextE[x].length > 3) {
-        getLetter132 += savedLetter1biggerthan3 + savedLetter2biggerthan3 + savedLetter3biggerthan3;
-    //my goal here was to make get letter 132 now contiain the first 3 letters of the user's entered word
-        getmostletters += (magikTextE[x]).slice();
-    //Since I already copied organised the first 3 letters and they're not in the code anymore, the rest of the integers in the code should all be in order starting from the user's 4th integer. Here, I'm trying to slive everything and save it to "getmostletters"
-        magikTextD = getLetter132 + getmostletters;
-    //Since "getLetter132" has our  first 3 letters and "getmostletters" has the rest, we should be ok just combining them. The final variable containing the whole word will be "magikTextD"
-        alert ("Your Message is" + magikTextD)
-    }
-    else if (magikTextE[x].length === 3) {
-        getLetter21 += savedLetter1equalto3 + savedLetter2equalto3;
-        getmostletters += (magikTextE[x]).slice();
-        magikTextD = getLetter21 + getmostletters;
-        alert ("Your Message is" + magikTextD)
-    }
-    else if (magikTextE[x].length === 2) {
-        getLetter1 += savedLetter1equalto2;
-        getmostletters += (magikText[x]).slice();
-        magikTextD = getLetter1 + getmostletters;
-        alert ("Your Message is" + magikTextD)
+        const answer = 180 - sum
+        alert('The third angle is ' + answer + '°');
     }
     else {
-        magikTextD += (magikTextE[x]).slice(0);
-        alert ("Your Message is" + magikTextD)
-    //Since the integers I added to make the code look more anonymous was already removed, there should only be one letter here. So I sliced it and put it into "magikTextD"
+        alert('Invalid. Enter two angles of a triangle.');
     }
-    //After doing that process, I had another idea that since magikTextE was how I saved the user's message, I could cheat by having it displayed here again but I guess there's no shortcuts 
-}
+    }
+    
+    // This function takes in two angles, and outputs the third angle of a triangle. I first prompt the user for two inputs. 
+    // Then, I add them together to create the sum of the two angles. Then the if statement checks if the sum of the two angles
+    // is smaller than 180 and bigger than 0. If both evaluate true, the if statement will run and the function will subtract 
+    // 180 by the variable sum. You will get the value of the third angle. If one conditional statement returns negative,
+    // the else statement will activate and you will get and alert saying that you didn't input the two angles of a triangle.
+    
+    
+    
+    
+    
+    function MagikEncryption () {
+        let originalMessage = window.prompt("Input the message you would like to be encrypted.");
+        let encryptMessage = "";
+        let firstLetter = "";
+        let secondLetter = "";
+    
+    // Here, I have the variables I will be using to encrypt a message. The user inputs originalMessage through a prompt.
+    // The rest of the variables are to be decided...
+    
+    originalMessage = originalMessage.split(" ");
+    
+    // I split the originalMessage that the user inputted so I can seperate them into elements (words) 
+    // For example. The message (I like hot dogs) Will be seperated into I, like, hot, dogs. Into seperate elements.
+    
+        for ( let i = 0; i < originalMessage.length; i = i + 1) {
+    
+    // This loop goes through each word and encrypts it.
+    
+        if (originalMessage[i].length > 2) {
+    
+    // This if statement checks if the word has more than two letter. If it does, it will perform the following:
+    
+            firstLetter = originalMessage[i][0];
+    
+    // Take the first letter of the word, and save it to variable firstLetter 
+    
+            secondLetter = originalMessage[i][1];
+    
+    // Take the second letter of the word, and save it to variable secondLetter 
+    
+            encryptMessage += (originalMessage[i]).slice(2);
+    
+    // Takes the word, and removes the first two letters, saving the remaing letters to encryptMessage.
+    // Eg. Noodles would become odles
+    
+            encryptMessage += firstLetter + "oG" + secondLetter + " ";
+    
+    // Then, we will add to encrypt message, the first letter, the letters oG, and then the second letter.
+    // All together it looks like this: Hello = lloHoGe
+    
+        }
+    
+    // These else if statements are pretty similar. If the word is === to a, i, A, or I, it will turn it into a code.
+    // Because a and i are the only one letter words in the english language, I wanted to put a special code for each 
+    // of them. 
+    
+        else if (originalMessage[i] === "a") {
+            encryptMessage += '0n6kd8f '
+        }
+        else if (originalMessage[i] === "i") {
+            encryptMessage += '1n6kd8f '
+        }
+    
+        else if (originalMessage[i] === "A") {
+            encryptMessage += '2n6kd8f '
+        }
+        else if (originalMessage[i] === "I") {
+            encryptMessage += '3n6kd8f '
+        }
+    
+        else {
+    
+    // This else function is for the words that are two letters long. It takes the first letter, adds the code "3Xy5r",
+    // And then adds the second letter. For examples: my = m3Xy5ry
+    
+            encryptMessage += (originalMessage[i][0]) + "3Xy5r" + (originalMessage[i][1]) + " ";
+        }
+    }
+        alert ("Your message: " + originalMessage + " translates to the encrypted message: " + encryptMessage);
+    
+    // Alert returns the message you entered, and the ecncrypted form of your message.
+    
+    }
+    
+    
+    
+    
+    
+    function MagikDecryption () {
+        let encryptedMessage = window.prompt("Input the message you would like to be encrypted.");
+        let decryptedMessage = "";
+        let lastPart = "";
+        let getFirstTwoLetters = "";
+    
+    // I declare the variables i'll be using in this function here. encryptedMessage is a prompt that the user inputs. The 
+    // rest are to be decided...
+    
+        encryptedMessage = encryptedMessage.split(" ");
+        
+    // I split the encryptedMessage that the user inputted so I can seperate them into elements (words) 
+    // For example. The message (3n6kd8f keloGi thoGo gsdoGo) Will be seperated into 
+    // 3n6kd8f, keloGi, thoGo, gsdoGo . Into seperate elements. 
+    
+        for ( let i = 0; i < encryptedMessage.length; i = i + 1) {
+    
+    // This loop goes through each word and decrypts it
+    
+        encryptedMessage[i] = encryptedMessage[i].replace(/3Xy5r/g, ""); 
+        encryptedMessage[i] = encryptedMessage[i].replace(/oG/g, ""); 
+    
+    // Everytime the loop goes through an iteration, it first removes the codewords from the elements to help with the
+    // decryption. For example: lloHoGe turns into lloHe (oG was removed per the above code) [Hello = lloHoGe]
+    
+        if (encryptedMessage[i] === "0n6kd8f") {
+            
+            decryptedMessage += 'a '
+        }
+        else if (encryptedMessage[i] === "1n6kd8f") {
+            
+            decryptedMessage += 'i '
+        }
+    
+        else if (encryptedMessage[i] === "2n6kd8f") {
+            
+            decryptedMessage += 'A '
+        }
+        else if (encryptedMessage[i] === "3n6kd8f") {
+            
+            decryptedMessage += 'I '
+        }
+    
+    // These else if statements are very similar. They both check for the codes above. Each code above represents a one 
+    // letter word. For example, if the user inputted 1n6kd8f, the else if statement would check for that value and 
+    // if it was a match, it would return the word i. ( 1n6kd8f = i )
+    
+        else if (encryptedMessage[i].length > 2) {
+    
+            // This else if function is for the words that are longer than two letters. 
+            
+                getFirstTwoLetters = encryptedMessage[i].slice(-2);
+    
+                // First, I take the last two letters and save them to the variable: getFirstTwoLetters
+    
+                lastPart = encryptedMessage[i].slice(0, -2);
+    
+                // Then, I slice the encrypted message by removing the last two letters and saving the rest to variable: 
+                // lastPart.
+      
+                decryptedMessage += getFirstTwoLetters + lastPart + " ";
+    
+                // Then, this adds it all together. 
+                // Eg. lloHe turns into decrypted message += He(getFirstTwoLetters) + llo(lastPart) = Hello
+    
+            } 
+    
+        else if (encryptedMessage[i].length <= 2){
+    
+            // This is for the two letter words. Since at the beginning we remove the 3Xy5r code from each two letter word,
+            // We are just left with the two letter words. Eg. a3Xy5rm is the word at the beginning. When the loop goes through it,
+            // It will remove the 3Xy5r code first so we are left with am. This else if function just adds the word am to the 
+            // decryptedMessage. 
+       
+            decryptedMessage += encryptedMessage[i] + " ";
+    
+        }
+        }
+        alert ("Your encrypted message: (" + encryptedMessage + ") means: " + decryptedMessage);
+    
+    // Alert returns the encrypted message you entered, and the decrypted form of your message.
+    
+    }
+    
